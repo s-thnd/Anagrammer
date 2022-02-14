@@ -52,12 +52,16 @@ public class Anagrammer {
 			System.out.println();
 			System.out.print("Input: ");
 			String word = scan.nextLine().toLowerCase().trim();
-			if(word.equalsIgnoreCase("get word")) {
+			if(word.isEmpty()) {
+				System.out.println("You didn't enter anything!");
+			}			
+			else if(word.equalsIgnoreCase("get word")) {
 				System.out.println("The word given to you is: " + target);
 			}
 			else if(word.equalsIgnoreCase("instructions")) {
 				System.out.println("Type in a word and press enter to guess.");
 				System.out.println("Points are determined based on the length of the word entered.");
+				System.out.println("You may NOT reuse any letters.");
 			}
 			else if(word.equalsIgnoreCase("End game")) {
 				System.out.println("You have ended the game.");
